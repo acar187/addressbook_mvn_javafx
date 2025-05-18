@@ -18,6 +18,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import java.util.List;
 
 
 public class ContactManagerFX extends Application{
@@ -27,7 +28,8 @@ public class ContactManagerFX extends Application{
     private ObservableList<Contact> contactList;
 
     @Override
-    public void start(Stage primaryStage){
+    public void start(Stage primaryStage) throws ClassNotFoundException{
+        DBUtil.initializeDatabase();
         contactDAO = new ContactDAO();
         contactList = FXCollections.observableArrayList(contactDAO.getAllContacts());
         
@@ -62,7 +64,7 @@ public class ContactManagerFX extends Application{
     TableColumn<Contact, String> phoneCol = new TableColumn<>("Phone");
     phoneCol.setCellValueFactory(data -> new javafx.beans.property.SimpleStringProperty(data.getValue().getPhone()));
     table.getColumns().addAll(idCol, nameCol, emailCol, phoneCol);
-    table.setItems(contactList);
+    //table.setItems(contactList);
     table.setItems(filteredList);
 
     nameField = new TextField();

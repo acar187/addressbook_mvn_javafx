@@ -45,7 +45,7 @@ public class ContactDAO {
             System.out.println("Error retrieving contacts: " + e.getMessage());
             e.printStackTrace();
         }
-        return null;
+        return new ArrayList<>();
     }
 
     public Contact getContact(int id) {
