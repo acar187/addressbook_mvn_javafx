@@ -3,7 +3,7 @@ An address book in Java using JavaFX as GUI and Maven as build tool. This applic
 ![Screen Shot Addressbook](https://github.com/user-attachments/assets/75685ea6-77a4-4d2d-b357-64710e2e411e)
 
 # Database
-MySQL server access credentials to be configured in DBUtil.java file. Currently holds root as username and no passord as credentials for the DB. Needs to be configured to your DB settings.
+MySQL server access credentials to be configured in DBUtil.java file. Currently holds "root" as username and no password as credentials for the DB. Needs to be configured to your DB settings.
 
 # Run
 In order to run this application go to folder target and download addressbook_mvn_javafx-1.0-SNAPSHOT.jar.
